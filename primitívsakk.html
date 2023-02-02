@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+    
         
         body 
         {
@@ -26,6 +27,8 @@
         text-align: center;
 
         text-transform: uppercase;
+
+        background-repeat: no-repeat;
        }        
 
        table 
@@ -36,17 +39,83 @@
        }
         
 
+       .feherBastya, .feherFuto,.feherLo,.feherVezer,.feherKiraly,.feherGyalog,
+       .feketeBastya,.feketeFuto,.feketeLo,.feketeVezer,.feketeKiraly,.feketeGyalog
+
+       .feherBastya{ background-position: 32% 103%;}
+       .feherFuto{background-position: 70% 103%;}
+       .feherLo{background-position: -10% 103%;}
+       .feherVezer{ background-position: 120% 53%;}
+       .feherKiraly{background-position: 70% 53%;}
+       .feherGyalog{background-position: 110% 103%;}
+
+       .feketeBastya{background-position: 32% 103%}
+       .feketeFuto{background-position: 32% 103%}
+       .feketeLo{background-position: 32% 103%}
+       .feketeVezer{background-position: 32% 103%}
+       .feketeKiraly{background-position: 32% 103%}
+       .feketeGyalog{background-position: 32% 103%}
 
        .feherBastya
        {
-            background-image: url(˙./sakkbábuk.png);
-            background-size: 297px 426px; 
-            background-position: 30% 100%;
+            background-image: url(./sakk.png);
+            background-size: 300°% 300%; 
+            background-position: 32% 103%;
        }
+       .feherFuto
+       {
+        background-image: url(./sakk.png);
+        background-size: 300% 300%; 
+        background-position: 70% 103%;
+       }
+       .feherLo
+       {
+        background-image: url(./sakk.png);
+        background-size: 300% 300%; 
+        background-position: -10% 103%;
+       }
+       .feherVezer
+       {
+        background-image: url(./sakk.png);
+        background-size: 300% 300%; 
+        background-position: 120% 53%;
+       }
+       
     </style>
 </head>
 <body>
-    <!--<img src="./sakkbábuk.png">-->
+    <script>
+        var sorszam=0;
+        var elso;
+        function kattint(elem)
+        {
+            //console.log(elem)
+            if(sorszam==0)
+            {
+                if(elem.dataset["babu"]!="")
+                elso=elem;
+
+
+                sorszam++;
+            }
+            else
+            {
+                //lerakás
+               elem.calssList.add(elso.dataset["babu"]);
+               elem.dataset["babu"]=elso.dataset["babu"];
+               
+               //regi törlés
+               elso.calssList.remove(elso.dataset["babu"]);
+               elso.dataset["babu"]=""
+
+
+                sorszam=0;
+            }
+
+            console.log(sorszam)
+        }
+    </script>
+    <!--<img src="./sakk.png">-->
     
     
     <table>
@@ -55,12 +124,12 @@
         </tr>
         <tr>
             <td>1</td>
-            <td class="fekete feherBastya"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
+            <td class="fekete feherBastya" data-babu="feherBastya" onclick="kattint(this)"></td>
+            <td calss="feherLo" data-babu="feherLo"></td>
+            <td class="fekete feherFuto" data-babu="feherFuto"></td>
+            <td class="feherVezer" data-babu="feherVezer"></td>
+            <td class="fekete feherKiraly" data-babu="feherKiraly"></td>
+            <td class="feherGyalog" data-babu="feherGyalog"></td>
             <td class="fekete"></td>
             <td></td>
         </tr>
@@ -117,7 +186,7 @@
                 <td></td>
                 <td class="fekete"></td>
              <tr>
-                    <td>1</td>
+                    <td>7</td>
                     <td class="fekete"></td>
                     <td></td>
                     <td class="fekete"></td>
@@ -128,7 +197,7 @@
                     <td></td>
              </tr>
             <tr>
-                    <td>2</td>
+                    <td>8</td>
                     <td></td>
                     <td class="fekete"></td>
                     <td></td>
