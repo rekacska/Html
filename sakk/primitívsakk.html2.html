@@ -28,7 +28,7 @@
 			margin: auto;
         }
 		.feherBastya, .feherFuto, .feherKiraly, .feherKiralyno, .feherLo, .feherGyalog, .feketeBastya, .feketeLo, .feketeFuto, .feketeKiralyno, .feketeKiraly, .feketeGyalog {
-			background-image: url(sakk2/sakkbabuk.png);
+			background-image: url(./sakk2/sakkbabuk\ .png);
             background-size: 300% 300%;
 		}
         .feherBastya 	{	background-position: 30% 103%;	}
@@ -57,17 +57,28 @@
 		//console.log(elem)
 		if(sorszam==0)
         {
-			if(elem.dataset["babu"]!="")
+            //üreset ne lehessen felvenni
+            if(elem.dataset["babu"] && elem.dataset["babu"]!="")
             {
-				elso=elem;
-				sorszam++;
-			}
-			
+                elso=elem;
+                sorszam++;
+                console.log(elem);
+                console.log(elem.dataset["babu"]);
+            }
 		}
-		else{
+		else if(elem!==elso) //saját magára rakás ellen 
+        {
+            //------...Új...------
+            //ha van ott bábu, akkor azt törölni kell
+            if (elem.dataset["babu"]!="")
+            {
+                elem.classList.remove(elem.dataset["babu"]);
+                elem.dataset["babu"]="";
+            }
+
 			//lerakás
 			elem.classList.add(elso.dataset["babu"]);
-			elso.dataset["babu"]=elso.dataset["babu"];
+			elem.dataset["babu"]=elso.dataset["babu"];
 			
 			//régi törlése
 			elso.classList.remove(elso.dataset["babu"]);
@@ -110,7 +121,7 @@
         <tr>
             <td>2</td>
             <td class="feherGyalog" datda-babu="feherGyalog"></td>
-            <td class="fekete feherGyalog"></td>
+            <td class="fekete feherGyalog" datda-babu="feherGyalog"></td>
             <td class="feherGyalog"></td>
             <td class="fekete feherGyalog"></td>
             <td class="feherGyalog"></td>
