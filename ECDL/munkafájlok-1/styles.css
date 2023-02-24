@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script|Nosifer&subset=latin,latin-ext);
 
-body{
+body
+{
     color: #000000;
+    font-family: tahoma, sans-serif;
+    background-color: #fff2e8;
 }
 
 .kep{
@@ -24,7 +27,7 @@ body{
     text-decoration: none;
 }
 #menu a:hover{
-    color: green;
+    color: red;
     text-decoration: none;
 }
 
