@@ -8,7 +8,7 @@ body
 }
 
 .kep{
-    border: 0;
+    border: 2px dotted red;
     float: right;
     width:130px;
 }
@@ -28,7 +28,7 @@ body
 }
 #menu a:hover{
     color: red;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* t�bl�zat st�luselemek */
@@ -40,11 +40,12 @@ table{
 }
 th, td{
     border: 1px dotted white;
-    padding: 5px 5px;
+    padding: 4px 20px;
 }
 td.kiemelt{
     color: red;
     font-weight: bold;
+    padding-left: 30px;
 }
 
 /* �rlap st�luselemek */
@@ -57,7 +58,7 @@ td.kiemelt{
     width: 300px;
 }
 #ajanlat_form input.meret{
-    width: 50px;
+    width: 70px;
 }
 
 /* szerkezeti st�luselemek */
