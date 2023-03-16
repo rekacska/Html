@@ -20,13 +20,13 @@ body
 
 /* men� hivatkoz�sok st�luselemei */
 
-#menu a,
-#menu a:link,
-#menu a:visited{
+#nav a,
+#nav a:link,
+#nav a:visited{
     color: yellow;
     text-decoration: none;
 }
-#menu a:hover{
+#nav a:hover{
     color: red;
     text-decoration: underline;
 }
@@ -80,15 +80,15 @@ td.kiemelt{
     text-align: center;
     height: 45px;
 }
-#menu{
+#nav{
     height: 35px;
 }
-#menu ul{
+#nav ul{
     margin: 0;
     padding: 0;
     text-align: center;
 }
-#menu li{
+#nav li{
     display: inline;
     margin: 0 40px;
     font-size: 18px;
@@ -100,7 +100,7 @@ td.kiemelt{
     margin: 0 auto;
     background-color: white;
 }
-#lablec{
+#footer p{
     height: 40px;
     width: 960px;
     margin: 0 auto;
@@ -115,3 +115,15 @@ td.kiemelt{
     padding: 10px;
     text-align: center;
 }
+
+
+*
+{
+    border: 1px solid red;
+}
+
+div
+{
+    border: 2px solid blue;
+}
+
